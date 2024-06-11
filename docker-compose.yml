@@ -1,0 +1,28 @@
+#version: '3.8'
+#
+#services:
+#  mysql:
+#    image: mysql:8.0
+#    environment:
+#      MYSQL_ROOT_PASSWORD: maninder123
+#      MYSQL_DATABASE: expiration
+#    ports:
+#      - "3306:3306"
+#    volumes:
+#      - mysql-data:/var/lib/mysql
+#
+#  app:
+#    image: your-dockerhub-username/jwt-authentication
+#    depends_on:
+#      - mysql
+#    ports:
+#      - "8081:8081"
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/expiration
+#      SPRING_DATASOURCE_USERNAME: root
+#      SPRING_DATASOURCE_PASSWORD: maninder123
+#      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+#      SPRING_PROFILES_ACTIVE: prod
+#
+#volumes:
+#  mysql-data:
